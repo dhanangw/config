@@ -1,7 +1,7 @@
--- block cursor
+-- Block cursor.
 vim.opt.guicursor = ""
 
--- line numbers
+-- Line numbers.
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -13,7 +13,7 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
--- disable line wrap
+-- Disable line wrap.
 vim.opt.wrap = false
 
 -- '/' search
