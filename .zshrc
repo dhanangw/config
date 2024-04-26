@@ -75,6 +75,7 @@ plugins=(git tmux)
 # oh-my-zsh tmux plugin
 # (src: https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/tmux/README.md)
 ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTONAME_SESSION=true
 
 source $ZSH/oh-my-zsh.sh
 
