@@ -52,5 +52,6 @@ return require('packer').startup(function(use)
 
   use 'ntpeters/vim-better-whitespace'
   use 'mbbill/undotree'
+  use 'alexghergh/nvim-tmux-navigation'
 
 end)
