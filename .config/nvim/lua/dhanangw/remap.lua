@@ -40,3 +40,4 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
+-- TODO: add pane and tab navigation
