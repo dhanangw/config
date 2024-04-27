@@ -1,3 +1,4 @@
+-- TODO: switch to lazy (https://github.com/folke/lazy.nvim).
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
