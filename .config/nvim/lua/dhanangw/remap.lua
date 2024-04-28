@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex) -- Open netrw.
+vim.keymap.set("n", "<leader>pv", vim.cmd.Rexplore) -- Open netrw.
 
 -- Move highlighted lines.
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
