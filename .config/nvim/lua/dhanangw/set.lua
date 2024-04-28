@@ -1,5 +1,4 @@
--- Block cursor.
-vim.opt.guicursor = ""
+vim.opt.guicursor = "" -- Block cursor.
 
 -- Line numbers.
 vim.opt.nu = true
@@ -13,8 +12,7 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
--- Disable line wrap.
-vim.opt.wrap = false
+vim.opt.wrap = false -- Disable line wrap.
 
 -- '/' search
 vim.opt.hlsearch = false
@@ -32,7 +30,7 @@ vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
 
--- netrw configurations
+-- Netrw
 vim.g.netrw_liststyle = 3 -- tree style
 vim.g.netrw_banner = 0 -- hide banner
 
