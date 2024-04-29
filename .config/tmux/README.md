@@ -16,8 +16,8 @@ Inspired by: [Dreams of Code - Tmux has forever changed the way I write code.](h
 - Jump to Window by index:
   `<prefix> + <window index>`
 - Scroll through all open Windows
-  `Ctrl + n`
-  `Ctrl + p`
+  `<prefix> + n`
+  `<prefix> + p`
 
 ### Panes
 - New Vertical Pane:
