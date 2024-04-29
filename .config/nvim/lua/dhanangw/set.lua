@@ -1,3 +1,4 @@
+vim.g.mapleader = " " -- set Space as Leader Key
 vim.opt.guicursor = "" -- Block cursor.
 
 -- Line numbers.
