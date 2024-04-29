@@ -29,15 +29,16 @@ return {
 		  {'rafamadriz/friendly-snippets'}, -- Optional
 	  }
   },
-  'ntpeters/vim-better-whitespace',
+  {
+      'ntpeters/vim-better-whitespace',
+      config = function()
+          vim.api.nvim_create_autocmd("BufWritePre", { command = ":StripWhitespace" }) -- Automatically remove whitespace when saving files.
+      end
+  },
   {
       'mbbill/undotree',
       keys = {
-          {
-              "<leader>u",
-              "<cmd>UndotreeToggle<cr>",
-              desc = "Open Undotree",
-          },
+          {"<leader>u", "<cmd>UndotreeToggle<cr>", desc = "Open Undotree" },
       },
   },
   'alexghergh/nvim-tmux-navigation',
