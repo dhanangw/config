@@ -32,15 +32,30 @@ return {
   {
       'ntpeters/vim-better-whitespace',
       config = function()
-          vim.api.nvim_create_autocmd("BufWritePre", { command = ":StripWhitespace" }) -- Automatically remove whitespace when saving files.
+          vim.api.nvim_create_autocmd("BufWritePre", {command = ":StripWhitespace"}) -- Automatically remove whitespace when saving files.
       end
   },
   {
       'mbbill/undotree',
       keys = {
-          {"<leader>u", "<cmd>UndotreeToggle<cr>", desc = "Open Undotree" },
+          {"<leader>u", "<cmd>UndotreeToggle<cr>", desc = "Open Undotree"},
       },
   },
-  'alexghergh/nvim-tmux-navigation',
+  {
+      'alexghergh/nvim-tmux-navigation',
+      config = function()
+          require'nvim-tmux-navigation'.setup {
+              disable_when_zoomed = true, -- defaults to falsekeybindings
+              keybindings = {
+                  left = "<C-h>",
+                  down = "<C-j>",
+                  up = "<C-k>",
+                  right = "<C-l>",
+                  last_active = "<C-\\>",
+                  next = "<C-Space>",
+              }
+          }
+      end
+  },
 }
 
