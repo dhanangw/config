@@ -5,9 +5,6 @@ return {
 	  dependencies = {'nvim-lua/plenary.nvim'}
   },
   {
-      'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'
-  },
-  {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
 	  dependencies = {
@@ -31,8 +28,9 @@ return {
   },
   {
       'ntpeters/vim-better-whitespace',
-      config = function()
-          vim.api.nvim_create_autocmd("BufWritePre", {command = ":StripWhitespace"}) -- Automatically remove whitespace when saving files.
+      init = function()
+          vim.g.strip_whitespace_on_save = 1
+          vim.g.strip_whitespace_confirm = 0
       end
   },
   {
@@ -52,17 +50,18 @@ return {
                   up = "<C-k>",
                   right = "<C-l>",
                   last_active = "<C-\\>",
-                  next = "<C-Space>",
               }
           }
       end
   },
   {
       "rose-pine/neovim",
-      config = function()
-          vim.cmd.colorscheme("rose-pine")
+      init = function()
           vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
           vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+      end
+      config = function()
+          vim.cmd.colorscheme("rose-pine")
       end
   },
 }
