@@ -1,10 +1,5 @@
 return {
   {
-	  'nvim-telescope/telescope.nvim',
-      version = '0.1.6',
-	  dependencies = {'nvim-lua/plenary.nvim'}
-  },
-  {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
 	  dependencies = {
