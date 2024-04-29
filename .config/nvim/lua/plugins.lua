@@ -1,12 +1,12 @@
 return {
   {
-	  'nvim-telescope/telescope.nvim', version = '0.1.6',
-	  -- or                            , branch = '0.1.x',
-	  dependencies = { {'nvim-lua/plenary.nvim'} }
+	  'nvim-telescope/telescope.nvim',
+      version = '0.1.6',
+	  dependencies = {'nvim-lua/plenary.nvim'}
   },
-
-  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
-
+  {
+      'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'
+  },
   {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
@@ -38,7 +38,7 @@ return {
   {
       'mbbill/undotree',
       keys = {
-          {"<leader>u", "<cmd>UndotreeToggle<cr>", desc = "Open Undotree"},
+          {"<leader>u", function() vim.cmd.UndotreeToggle() end, desc = "Open Undotree"},
       },
   },
   {
