@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<leader>pv", vim.cmd.Rexplore) -- Open netrw.
+vim.keymap.set("n", "<leader>pv", vim.cmd.Rexplore) -- Open Netrw.
 
 -- Move highlighted lines.
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -39,4 +39,3 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
--- TODO: add pane and tab navigation
