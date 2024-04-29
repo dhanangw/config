@@ -1,3 +1,4 @@
+-- More complex plugin settings are in plugins/
 return {
   {
       'ntpeters/vim-better-whitespace',
