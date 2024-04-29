@@ -29,9 +29,17 @@ return {
 		  {'rafamadriz/friendly-snippets'}, -- Optional
 	  }
   },
-
   'ntpeters/vim-better-whitespace',
-  'mbbill/undotree',
+  {
+      'mbbill/undotree',
+      keys = {
+          {
+              "<leader>u",
+              "<cmd>UndotreeToggle<cr>",
+              desc = "Open Undotree",
+          },
+      },
+  },
   'alexghergh/nvim-tmux-navigation',
 }
 
