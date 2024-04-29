@@ -1,37 +1,44 @@
--- TODO: switch to lazy (https://github.com/folke/lazy.nvim).
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+-- Setup Lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+vim.g.mapleader = " "
 
-return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
-
-  use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.6',
+local plugins = {
+  {
+	  'nvim-telescope/telescope.nvim', version = '0.1.6',
 	  -- or                            , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
-  }
+	  dependencies = { {'nvim-lua/plenary.nvim'} }
+  },
 
-  use ({
+  {
       'rose-pine/neovim',
-      as = 'rose-pine',
+      name = 'rose-pine',
       config = function()
           vim.cmd('colorscheme rose-pine')
       end
-  })
-  use { 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} }
-  use {
+  },
+  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+  {
       "ThePrimeagen/harpoon",
       branch = "harpoon2",
-      requires = { {"nvim-lua/plenary.nvim"} }
-  }
+      dependencies = { {"nvim-lua/plenary.nvim"} }
+  },
 
-  use ({
+  {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
-	  requires = {
+	  dependencies = {
 		  -- LSP Support
 		  {'neovim/nvim-lspconfig'},             -- Required
 		  {'williamboman/mason.nvim'},           -- Optional
@@ -49,10 +56,12 @@ return require('packer').startup(function(use)
 		  {'L3MON4D3/LuaSnip'},             -- Required
 		  {'rafamadriz/friendly-snippets'}, -- Optional
 	  }
-  })
+  },
 
-  use 'ntpeters/vim-better-whitespace'
-  use 'mbbill/undotree'
-  use 'alexghergh/nvim-tmux-navigation'
+  'ntpeters/vim-better-whitespace',
+  'mbbill/undotree',
+  'alexghergh/nvim-tmux-navigation',
+}
 
-end)
+require("lazy").setup(plugins, {})
+
