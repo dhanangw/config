@@ -37,9 +37,21 @@ vim.g.netrw_banner = 0    -- hide banner
 -- undo configurations
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
+-- Diagnostics
 vim.diagnostic.config({
     virtual_text = true
+})
+
+-- Highlights whitespaces
+vim.opt.list = true
+vim.opt.listchars:append("eol:↵,trail:~,tab:>-,nbsp:␣") -- TODO: set whitespace highlights as red block for each blank character.
+-- vim.api.nvim_set_hl(0, 'SpecialKey', {fg = '#ff0000', bg = '#ff0000'})
+
+-- Remove whitespaces on Bufferwrites
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+    pattern = { "*" },
+    command = [[%s/\s\+$//e]],
 })
