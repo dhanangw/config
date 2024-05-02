@@ -33,6 +33,7 @@ vim.opt.colorcolumn = "80"
 -- Netrw
 vim.g.netrw_liststyle = 3 -- tree style
 vim.g.netrw_banner = 0    -- hide banner
+-- TODO: hide ../ from Netrw tree style.
 
 -- undo configurations
 vim.opt.swapfile = false
@@ -45,7 +46,7 @@ vim.diagnostic.config({
     virtual_text = true
 })
 
-vim.fn.matchadd('errorMsg', [[\s\+$]]) -- Highlights whitespaces
+-- TODO: Reliable highlights whitespaces
 
 -- Auto-deletes whitespace on buffer saves
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
