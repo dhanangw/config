@@ -45,9 +45,9 @@ vim.diagnostic.config({
     virtual_text = true
 })
 
-vim.fn.matchadd('errorMsg', [[%s/\s\+$//e]]) -- Highlights whitespaces.
+vim.fn.matchadd('errorMsg', [[\s\+$]]) -- Highlights whitespaces
 
--- Auto-delete whitespaces on Buffer writes.
+-- Auto-deletes whitespace on buffer saves
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     pattern = { "*" },
     command = [[%s/\s\+$//e]],
