@@ -45,12 +45,9 @@ vim.diagnostic.config({
     virtual_text = true
 })
 
--- Highlights whitespaces
-vim.opt.list = true
-vim.opt.listchars:append("eol:↵,trail:~,tab:>-,nbsp:␣") -- TODO: set whitespace highlights as red block for each blank character.
--- vim.api.nvim_set_hl(0, 'SpecialKey', {fg = '#ff0000', bg = '#ff0000'})
+vim.fn.matchadd('errorMsg', [[%s/\s\+$//e]]) -- Highlights whitespaces.
 
--- Remove whitespaces on Bufferwrites
+-- Auto-delete whitespaces on Buffer writes.
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     pattern = { "*" },
     command = [[%s/\s\+$//e]],
