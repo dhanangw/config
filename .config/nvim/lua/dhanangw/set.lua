@@ -1,5 +1,5 @@
--- Block cursor.
-vim.opt.guicursor = ""
+vim.g.mapleader = " "  -- set Space as Leader Key
+vim.opt.guicursor = "" -- Block cursor.
 
 -- Line numbers.
 vim.opt.nu = true
@@ -8,13 +8,12 @@ vim.opt.relativenumber = true
 -- 4 space indentation
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
-vim.opt.shiftwidth= 4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
--- Disable line wrap.
-vim.opt.wrap = false
+vim.opt.wrap = false -- Disable line wrap.
 
 -- '/' search
 vim.opt.hlsearch = false
@@ -30,15 +29,27 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
-vim.g.mapleader = " "
 
--- netrw configurations
+-- Netrw
 vim.g.netrw_liststyle = 3 -- tree style
-vim.g.netrw_banner = 0 -- hide banner
+vim.g.netrw_banner = 0    -- hide banner
+-- TODO: hide ../ from Netrw tree style.
 
 -- undo configurations
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
+-- Diagnostics
+vim.diagnostic.config({
+    virtual_text = true
+})
+
+-- TODO: Reliable highlights whitespaces via built-in functionalities
+
+-- Auto-deletes whitespace on buffer saves
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+    pattern = { "*" },
+    command = [[%s/\s\+$//e]],
+})

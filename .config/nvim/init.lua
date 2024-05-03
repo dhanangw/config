@@ -1,2 +1,4 @@
--- source:  (ThePrimeagen -- 0 to LSP : Neovim RC From Scratch)[https://www.youtube.com/watch?v=w7i4amO_zaE]
-require("dhanangw")
+require("dhanangw.set")
+require("dhanangw.remap")
+require("dhanangw.lazy_init")
+
