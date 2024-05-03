@@ -46,7 +46,7 @@ vim.diagnostic.config({
     virtual_text = true
 })
 
--- TODO: Reliable highlights whitespaces
+-- TODO: Reliable highlights whitespaces via built-in functionalities
 
 -- Auto-deletes whitespace on buffer saves
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {

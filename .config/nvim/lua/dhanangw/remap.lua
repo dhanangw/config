@@ -1,8 +1,8 @@
 vim.keymap.set("n", "<leader>pv", vim.cmd.Rexplore) -- Open Netrw.
 
--- Move highlighted lines.
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+-- Move highlighted lines...
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- ...up...
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- ...or down.
 
 vim.keymap.set("n", "J", "mzJ`z") -- Make cursor stay in-place when doing 'J'.
 
@@ -20,9 +20,9 @@ vim.keymap.set("x", "<leader>p", [["_dP]]) -- Keep pasting the same thing in nvi
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({"n", "v"}, "<leader>d", [["_d]]) -- TODO: what does this do?
 
-vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("n", "Q", "<nop>") -- TODO: what does this do?
 
 -- LSP quickfix navigation.
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
@@ -34,7 +34,5 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true }) -- Make current file executable.
 
 -- Source current file
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
+vim.keymap.set("n", "<leader><leader>", function() vim.cmd("so") end)
 
