@@ -62,3 +62,4 @@ LSP servers are managed by [mason.nvim](https://github.com/williamboman/mason.nv
 - vim.lsp.buf.references(): `<leader>vrr`
 - vim.lsp.buf.rename(): `<leader>vrn`
 - vim.lsp.buf.signature_help(): `<C-h>`
+Run `:h lsp.buf` to know what those LSP functionalities do.
