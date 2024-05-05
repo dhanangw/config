@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux vi-mode)
+plugins=(git tmux)
 
 # oh-my-zsh tmux plugin
 # (src: https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/tmux/README.md)
@@ -80,14 +80,6 @@ ZSH_TMUX_AUTONAME_SESSION=true
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-# Enable vi mode
-bindkey -v
-MODE_INDICATOR="%F{white}+%f"
-INSERT_MODE_INDICATOR="%F{yellow}+%f"
-PROMPT="$PROMPT\$(vi_mode_prompt_info)"
-RPROMPT="\$(vi_mode_prompt_info)$RPROMPT"
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
