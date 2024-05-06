@@ -116,3 +116,13 @@ alias brewintel='eval "$(/usr/local/homebrew/bin/brew shellenv)"'
 # (src: https://news.ycombinator.com/item?id=11070797)
 alias config='/usr/bin/git --git-dir=$HOME/.config/ --work-tree=$HOME'
 
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# >>> JVM installed by coursier >>>
+export JAVA_HOME="/Users/dhanangw/Library/Caches/Coursier/arc/https/github.com/adoptium/temurin8-binaries/releases/download/jdk8u412-b08/OpenJDK8U-jdk_x64_mac_hotspot_8u412b08.tar.gz/jdk8u412-b08/Contents/Home"
+# <<< JVM installed by coursier <<<
+
+# >>> coursier install directory >>>
+export PATH="$PATH:/Users/dhanangw/Library/Application Support/Coursier/bin"
+# <<< coursier install directory <<<
