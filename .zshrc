@@ -116,7 +116,4 @@ alias brewintel='eval "$(/usr/local/homebrew/bin/brew shellenv)"'
 # (src: https://news.ycombinator.com/item?id=11070797)
 alias config='/usr/bin/git --git-dir=$HOME/.config/ --work-tree=$HOME'
 
-# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
