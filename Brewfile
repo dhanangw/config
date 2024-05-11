@@ -1,0 +1,5 @@
+tap "coursier/formulas"
+tap "homebrew/bundle"
+brew "neovim"
+brew "tmux"
+brew "coursier/formulas/coursier"
