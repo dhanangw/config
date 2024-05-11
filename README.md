@@ -13,8 +13,13 @@
    ```
 2. Install Brew tap and casks
    ```bash
-   brew bundle --file ./Brewfile
+   brew bundle install --global
    ```
+
+# Updating Brewfile
+```bash
+brew bundle dump --global --force
+```
 
 # Zsh
 TODO: list commonly used keymaps in Zsh
