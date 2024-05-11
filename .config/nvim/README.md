@@ -6,9 +6,9 @@ Inspired by:
 - [VonHeikemen - You might not need lsp-zero](https://lsp-zero.netlify.app/v3.x/blog/you-might-not-need-lsp-zero.html)
 
 # Managing plugins
-Neovim plugins are managed with [lazy.nvim](https://github.com/folke/lazy.nvim).
-To add a new plugin, create a new `.lua` file in `plugins/` ([examples](https://github.com/folke/lazy.nvim?tab=readme-ov-file#examples)).
-To delete a plugin, delete the correspondning `.lua` file in `plugins/`.
+Neovim plugins are managed with [lazy.nvim](https://github.com/folke/lazy.nvim).\
+To add a new plugin, create a new `.lua` file in `plugins/` ([examples](https://github.com/folke/lazy.nvim?tab=readme-ov-file#examples)).\
+To delete a plugin, delete the correspondning `.lua` file in `plugins/`.\
 Run `:Lazy` in Normal Mode to manage plugins.
 
 # Commonly Used Keymaps
