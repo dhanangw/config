@@ -15,6 +15,10 @@
    ```bash
    brew bundle install --global
    ```
+3. Setup Coursier with JVM 8
+   ```bash
+   cs setup --jvm 8
+   ```
 
 # Updating Brewfile
 ```bash
