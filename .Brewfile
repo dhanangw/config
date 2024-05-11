@@ -1,5 +1,6 @@
 tap "coursier/formulas"
 tap "homebrew/bundle"
+brew "mysql"
 brew "neovim"
 brew "ripgrep"
 brew "tmux"
