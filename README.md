@@ -15,9 +15,9 @@
    ```bash
    brew bundle install --global
    ```
-3. Setup Coursier with JVM 8
+3. Setup Coursier with JVM 11 (nvim-metals requires JDK 11)
    ```bash
-   cs setup --jvm 8
+   cs setup --jvm 11
    ```
 
 # Updating Brewfile
