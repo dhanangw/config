@@ -1,4 +1,3 @@
-# TODO: continue
 Inspired by:
 - [ThePrimeagen - 0 to LSP : Neovim RC From Scratch.](https://www.youtube.com/watch?v=w7i4amO_zaE)
 - [Andrew Courter - Migrate from Packer to lazy.nvim](https://www.youtube.com/watch?v=cGZdvEIeiSg)
@@ -49,7 +48,7 @@ LSP servers are managed by [mason.nvim](https://github.com/williamboman/mason.nv
 - Open Mason: `:Mason`.
 - vim.lsp.buf.definition(): `gd`
 - vim.lsp.buf.hover(): `K`
-- vim.lsp.buf.format(): `<leader>f"`
+- vim.lsp.buf.format(): `<leader>f`
 - vim.lsp.buf.workspace_symbol(): `<leader>vws`
 - vim.diagnostic.open_float(): `<leader>vd`
 - vim.diagnostic.goto_next(): `[d`
