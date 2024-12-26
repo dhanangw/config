@@ -7,7 +7,7 @@ Inspired by: [Dreams of Code - Tmux has forever changed the way I write code.](h
 ## Top level:
 [Oh My Zsh Tmux Plugin Aliases](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/tmux#aliases)
 ## Inside Tmux
-### Prefix:
+### Prefix
 `Ctrl + Space`
 
 ### Windows
@@ -32,4 +32,4 @@ There are 2 ways:
 1. Highlight with mouse. When highlight is gone, the previously highlighted string
    will be in clipboard.
 2. Enter Copy Mode with `<prefix> + [`, move around in Copy Mode with Vi movements,
-   highlight the string and press enter, the highlighted string will be in clipboard.
+   highlight the string, and press enter. The highlighted string will be in clipboard.
