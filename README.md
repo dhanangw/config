@@ -25,6 +25,12 @@
 brew bundle dump --global --force
 ```
 
+# Updating config
+`config` is an alias for `git`. Update config just like git (i.e. `config add .`, etc)
+
 # Zsh
-TODO: list commonly used keymaps in Zsh
+- switch to run in arm: `archarm`
+- switch to run in intel: `archintel`
+- change brew to run in arm: `brewarm`
+- change brew to run in intel: `brewintel`
 
