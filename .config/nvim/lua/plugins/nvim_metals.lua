@@ -7,14 +7,20 @@ return {
         "nvim-lua/plenary.nvim",
     },
     ft = { "scala", "sbt" },
-
     opts = function()
         local metals_config = require("metals").bare_config()
         metals_config.on_attach = LSP_ON_ATTACH
         metals_config.init_options.statusBarProvider = "on"
+        metals_config.settings = {
+            showImplicitArguments = true,
+            showImplicitConversionsAndClasses = true,
+            showInferredType = true,
+            superMethodLensesEnabled = true,
+        }
+        metals_config.init_options.statusBarProvider = "on"
+        metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
         return metals_config
     end,
-
     config = function(self, metals_config)
         local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
         vim.api.nvim_create_autocmd("FileType", {
