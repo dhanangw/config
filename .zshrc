@@ -112,8 +112,15 @@ alias archintel="env /usr/bin/arch -x86_64 /bin/zsh --login"
 alias brewarm='eval "$(/opt/homebrew/bin/brew shellenv)"'
 alias brewintel='eval "$(/usr/local/homebrew/bin/brew shellenv)"'
 
-# .dotfiles management
-# (src: https://news.ycombinator.com/item?id=11070797)
+# .dotfiles management (src: https://news.ycombinator.com/item?id=11070797)
 alias config='/usr/bin/git --git-dir=$HOME/.config/ --work-tree=$HOME'
 
+# to export environment variables from .env file
+loadenv() {
+    if [[ $1 =~ \.env$ ]]; then
+        set -a
+        source $1
+        set +a
+    fi
+}
 
