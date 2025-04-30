@@ -33,3 +33,7 @@ There are 2 ways:
    will be in clipboard.
 2. Enter Copy Mode with `<prefix> + [`, move around in Copy Mode with Vi movements,
    highlight the string, and press enter. The highlighted string will be in clipboard.
+
+### load environment variables from a .env file
+`loadenv <path to .env file>`
+
